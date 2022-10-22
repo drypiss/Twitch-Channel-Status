@@ -46,7 +46,7 @@
     // Ask twitch for the status of all channels at once
     $.ajax({
       type: 'GET',
-      url: 'https://api.twitch.tv/kraken/streams',
+      url: 'https://api.twitch.tv/helix/streams',
       data: `channel=${Object.keys(channels).join(",")}&limit=${Object.keys(channels).length}`,
       headers: {
         'Client-ID': 'i1mrnd6g2wleqml4jo5exo26cza7kz'
