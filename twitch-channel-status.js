@@ -49,7 +49,7 @@
       url: 'https://api.twitch.tv/helix/streams',
       data: `channel=${Object.keys(channels).join(",")}&limit=${Object.keys(channels).length}`,
       headers: {
-        'Client-ID': clientid
+        'Client-ID': 'i1mrnd6g2wleqml4jo5exo26cza7kz'
       }
     }).done(function (data) {
       // We can only handle 100 online channels at a time :(
