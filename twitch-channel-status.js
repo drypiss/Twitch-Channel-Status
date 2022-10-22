@@ -3,7 +3,7 @@
 
 // Create a closure with a reference to our script
 (function (document, $script) {
-  console.log('[twitch-channel-status] squuibi fork - v1.0 - helix change')
+  console.log('[twitch-channel-status] squuibi fork - v1.0')
   // Allow customizing the script with various data-* attributes
   var clientid = $script.attr("data-clientid") || false
       attribute = $script.attr("data-attribute") || "data-twitch-channel",
@@ -46,10 +46,11 @@
     // Ask twitch for the status of all channels at once
     $.ajax({
       type: 'GET',
-      url: 'https://api.twitch.tv/helix/streams',
+      url: 'https://api.twitch.tv/kraken/streams',
       data: `channel=${Object.keys(channels).join(",")}&limit=${Object.keys(channels).length}`,
       headers: {
-        'Client-ID': 'i1mrnd6g2wleqml4jo5exo26cza7kz'
+        'client-id': 'i1mrnd6g2wleqml4jo5exo26cza7kz',
+        'accept': 'application/vnd.twitchtv.v5+json'
       }
     }).done(function (data) {
       // We can only handle 100 online channels at a time :(
