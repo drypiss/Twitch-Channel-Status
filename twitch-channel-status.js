@@ -3,7 +3,7 @@
 
 // Create a closure with a reference to our script
 (function (document, $script) {
-  console.log('[twitch-channel-status] squuibi fork - v1.0')
+  console.log('[twitch-channel-status] squuibi fork - v1.0 - helix change')
   // Allow customizing the script with various data-* attributes
   var clientid = $script.attr("data-clientid") || false
       attribute = $script.attr("data-attribute") || "data-twitch-channel",
